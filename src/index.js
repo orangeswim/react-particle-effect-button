@@ -54,7 +54,7 @@ export default class ParticleEffectButton extends Component {
 
   state = {
     status: this.props.hidden ? 'hidden' : 'normal',
-    progress: 0
+    progress: 0,
   }
 
   _rect = {
@@ -82,12 +82,12 @@ export default class ParticleEffectButton extends Component {
     const {
       children,
       className,
-      direction
+      direction,
+      delay
     } = this.props
 
     const {
       status,
-      delay
     } = this.state
     var progress = this.state.progress;
     const wrapperStyles = { }
@@ -95,7 +95,7 @@ export default class ParticleEffectButton extends Component {
     const canvasStyles = { }
     
     if(status === 'showing'){
-       if(progress < (100-delay) ){
+       if(progress > (100-delay) ){
          progress = 0;
        }else{
          progress = (progress - (100-delay)) * (1/(100 -delay) )
