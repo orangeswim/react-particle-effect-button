@@ -98,7 +98,7 @@ export default class ParticleEffectButton extends Component {
        if(progress > (100-delay) ){
          progress = 0;
        }else{
-         progress = (progress - (100-delay)) * (1/(100 -delay)));
+         progress = (progress - (100-delay)) * (1/(100 -delay) )
        }
     }
 
