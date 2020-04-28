@@ -85,12 +85,20 @@ export default class ParticleEffectButton extends Component {
 
     const {
       status,
-      progress
+    
     } = this.state
-
+    var progress = this.state;
     const wrapperStyles = { }
     const contentStyles = { }
     const canvasStyles = { }
+    
+    if(status === 'showing'){
+       if(progress < 25){
+         progress = 0;
+       }else{
+         progress = (progress - 25) * (1/75);
+       }
+    }
 
     if (status === 'hiding' || status === 'showing') {
       const prop = this._isHorizontal() ? 'translateX' : 'translateY'
