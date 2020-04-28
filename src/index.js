@@ -95,10 +95,10 @@ export default class ParticleEffectButton extends Component {
     const canvasStyles = { }
     
     if(status === 'showing'){
-       if(progress < delay){
+       if(progress > (100-delay) ){
          progress = 0;
        }else{
-         progress = (progress - delay) * (1/(100-delay));
+         progress = (progress - (100-delay)) * (1/(100 -delay)));
        }
     }
 
