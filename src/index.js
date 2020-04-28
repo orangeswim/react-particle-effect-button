@@ -30,7 +30,8 @@ export default class ParticleEffectButton extends Component {
     particlesAmountCoefficient: PropTypes.number,
     oscillationCoefficient: PropTypes.number,
     onBegin: PropTypes.func,
-    onComplete: PropTypes.func
+    onComplete: PropTypes.func,
+    delay: PropTypes.number,
   }
 
   static defaultProps = {
@@ -47,7 +48,8 @@ export default class ParticleEffectButton extends Component {
     particlesAmountCoefficient: 3,
     oscillationCoefficient: 20,
     onBegin: noop,
-    onComplete: noop
+    onComplete: noop,
+    delay: 25,
   }
 
   state = {
