@@ -168,8 +168,8 @@ export default class ParticleEffectButton extends Component {
     this._ctx = this._canvas.getContext('2d')
 
     anime({
-      targets: { value: (status === 'hiding') ? 0 : 100 },
-      value: (status === 'hiding') ? 100 : 0,
+      targets: { value: (status === 'hiding') ? 0 : 101 },
+      value: (status === 'hiding') ? 101 : 0,
       duration: duration,
       easing: easing,
       begin: onBegin,
